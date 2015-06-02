@@ -1,0 +1,12 @@
+html, body
+	height: 100%
+
+body
+	color: palette(base)
+	font-size: percentage($base-font-size / 16px)
+	font-family: $base-font-family
+	line-height: $base-line-height
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	.no-mediaqueries &
+		min-width: $grid-max-width

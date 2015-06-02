@@ -1,0 +1,27 @@
+// Susy Grids
+// http://susydocs.oddbird.net/
+// Favor the semantic approach (+span(4))
+// Use this only on rare cases and inside WYSIWYG content
+// -------------------------------------------------------------------------------
+.columns
+	+container
+	$i: 1
+	@while $i <= susy-get(columns)
+		.span#{$i}
+			$half: ceil(susy-get(columns)/$i)
+			+span($i)
+			&:nth-child(#{$half}n)
+				+omega
+		.pre#{$i}
+			+pre($i)
+		.push#{$i}
+			+push($i)
+		$i: $i + 1
+
+	> [class^="span"]:last-child,
+	> [class*=" span"]:last-child
+		+omega
+
+	> [class^="span"].not-last,
+	> [class*=" span"].not-last
+		float: left!important

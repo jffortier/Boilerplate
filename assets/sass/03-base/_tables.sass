@@ -1,0 +1,43 @@
+// Tables
+// -------------------------------------------------------------------------------
+table
+	border-collapse: collapse
+	border-spacing: 0
+	clear: both
+	border-left: 0
+
+caption
+	padding-bottom: 0.5em
+
+thead
+	tr
+		border-bottom: 3px $base-border-color solid
+tbody
+	tr
+		border-bottom: 1px $base-border-color solid
+	tr:last-child
+		border-bottom: 0
+	th
+		border-right: 3px $base-border-color solid
+		text-align: right
+		width: 0.1%
+
+td, th
+	padding: 0.75em
+	text-align: left
+
+th
+	font-weight: bold
+	vertical-align: bottom
+
+td
+	font-weight: normal
+	vertical-align: top
+
+
+
+// Styles
+// -------------------------------------------------------------------------------
+.table-condensed
+	td, th
+		padding: 0.25em 0.75em

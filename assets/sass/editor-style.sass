@@ -1,0 +1,56 @@
+/* Theme Name: [Project Name] */
+/* Description: For the Wordpress WYSIWYG - Created with style for [Project Name] */
+/* Author: [Author] */
+/* Author URI: [Author URI] */
+/* Version: 1.0 */
+/* Sass Files: /assets/sass/editor-style.sass */
+
+// Libraries
+@import ../../bower_components/susy/sass/susy
+
+// 01 - Settings
+@import 01-settings/configs.scss
+
+// 02 - Tools
+@import 02-tools/mixins.sass
+@import 02-tools/animations.sass
+@import 02-tools/functions.sass
+
+// 03 - Base
+@import 03-base/reset.sass
+@import 03-base/fontface.sass
+@import 03-base/shell.sass
+@import 03-base/typography.sass
+@import 03-base/blockquotes.sass
+@import 03-base/code.sass
+@import 03-base/forms.sass
+@import 03-base/lists.sass
+@import 03-base/media.sass
+@import 03-base/rules.sass
+@import 03-base/tables.sass
+
+// 04 - Layouts
+@import 04-layouts/grid.sass
+
+// 05 - Components
+@import 05-components/buttons.sass
+@import 05-components/brandcolors.sass
+
+
+// Special overwrites
+body
+	padding: 3%
+	margin: 0
+	max-width: 100%
+	min-width: 100%
+
+	&.wp-autoresize
+		padding: 3%!important
+
+	.wp-fullscreen &.wp-autoresize
+		padding: 0!important
+
+
+// Reset all the transitions
+*
+	transition: none!important

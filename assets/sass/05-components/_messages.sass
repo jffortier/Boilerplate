@@ -1,0 +1,19 @@
+// Messages
+// -------------------------------------------------------------------------------
+%msg
+	border-radius: 0.1875em
+	padding: 0.6em 1em
+	margin-bottom: $base-line-height * 0.5em
+
+.msg-info
+	background-color: palette(base, x-light)
+	@extend %msg
+
+.msg-success
+	background-color: palette(base, x-light)
+	@extend %msg
+
+.msg-error
+	@extend %msg
+	background-color: palette(error)
+	color: #fff

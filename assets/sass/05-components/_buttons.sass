@@ -1,0 +1,71 @@
+// Default Buttons
+// -------------------------------------------------------------------------------
+%b
+	background-color: palette(link)
+	border-radius: 0.1875em
+	border: 0
+	color: #fff
+	display: inline-block
+	font-weight: bold
+	padding: 0.75em 2em
+	text-decoration: none
+	&:hover,
+	&:focus, // accessibility
+	&.active
+		background-color: palette(link, dark)
+		color: #fff
+
+.b
+	@extend %b
+
+
+// Sizes
+// Use .xsmall, .small, .medium, .large, .xlarge
+// Any other custom sizes goes here
+// -------------------------------------------------------------------------------
+
+
+
+// Styles
+// -------------------------------------------------------------------------------
+.b1
+	background-color: transparent
+	box-shadow: inset 0 0 0 0.125em palette(link)
+	border-radius: 0.25em
+	color: palette(link)
+	&:hover
+		background-color: palette(link)
+
+
+// Loading
+// -------------------------------------------------------------------------------
+.b-loading
+	position: relative
+
+	span
+		display: block
+		position: absolute
+		top: 50%
+		left: 1em
+		margin-top: -0.625em
+		width: 1em
+		height: 1em
+		transition: transform 0.3s ease
+		transform: scale(0)
+
+		&:after
+			border: 0.15em solid rgba(palette(white), 0.1)
+			border-left: 0.15em solid palette(white)
+			border-radius: 100%
+			content: ""
+			display: block
+			width: 100%
+			height: 100%
+			animation: rotate 0.8s infinite linear
+
+	&.active
+		padding-right: 1.25em
+		padding-left: 2.75em
+		span
+			transform: scale(1)
+

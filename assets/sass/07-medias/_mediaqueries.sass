@@ -1,0 +1,64 @@
+// Media queries - Disable iOS/WinMobile font size changes
+// -------------------------------------------------------------------------------
+@media screen and (max-width: 768px), screen and (max-device-width:1024px)
+	html
+		-ms-text-size-adjust: none
+		-webkit-text-size-adjust: none
+
+
+// Smaller than default width
+// -------------------------------------------------------------------------------
+@media only screen and (max-width: $grid-max-width)
+	body
+		margin: 0
+		width: 95%
+
+
+// Smaller than default width
+// -------------------------------------------------------------------------------
+// @media only screen and (max-width: 768px)
+
+
+// Screens and Ipad
+// -------------------------------------------------------------------------------
+// @media only screen and (max-width: 1024px)
+
+
+// Ipad Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 1024px)
+
+
+// Ipad Portrait Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 1024px) and (orientation: "portrait")
+
+
+// Ipad Landscape Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 1024px) and (orientation: "landscape")
+
+
+// iPhone Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 320px)
+
+
+// iPhone Portrait Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 320px) and (orientation: "portrait")
+
+
+// iPhone Landscape Only
+// -------------------------------------------------------------------------------
+// @media only screen and (max-device-width: 320px) and (orientation: "landscape")
+
+
+// Retina Only
+// -------------------------------------------------------------------------------
+// @media only screen and (-webkit-min-device-pixel-ratio: 2)
+
+
+// Non-Retina Only
+// -------------------------------------------------------------------------------
+// @media only screen and (-webkit-min-device-pixel-ratio: 1)

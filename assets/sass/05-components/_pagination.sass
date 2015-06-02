@@ -1,0 +1,40 @@
+// Pagination
+// -------------------------------------------------------------------------------
+.pagination
+	display: flex
+	ul
+		+list-reset
+		display: flex
+
+		li
+			display: flex
+
+		a
+			border: 2px palette(base, x-light) solid
+			border-left: 0
+			display: flex
+			align-items: center
+			padding: 0 1em
+			text-decoration: none
+
+			&:hover
+				background-color: palette(base, x-light)
+
+		li:first-child a
+			border-left: 2px palette(base, x-light) solid
+
+	.b-previous
+		margin-right: 1em
+
+	.b-next
+		margin-left: 1em
+	// .number
+	// 	display: block
+	// 	padding: 0 0.5em
+	// 	line-height: 1.6em
+	// 	min-width: 1.6em
+	// 	text-align: center
+
+	// .current
+	// 	background-color: $color-link
+	// 	color: #fff

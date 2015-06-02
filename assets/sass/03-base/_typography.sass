@@ -1,0 +1,119 @@
+// Text selection
+// -------------------------------------------------------------------------------
+=selection
+	background-color: palette(link)
+	color: #fff
+	text-shadow: 1px 1px 0px darken(palette(link), 10%)
+
+::selection
+	+selection
+::-moz-selection
+	+selection
+
+
+// Links
+// -------------------------------------------------------------------------------
+a
+	color: palette(link)
+	transition: all 0.3s ease
+	&:hover,
+	&:focus
+		color: palette(link, dark)
+	&:link
+		-webkit-tap-highlight-color: rgba(palette(link, light), 0.8)
+
+
+// General
+// -------------------------------------------------------------------------------
+p
+	margin-bottom: $base-line-height * 1em
+
+small
+	font-size: 0.8em
+
+i, em
+	font-style: italic
+
+b, strong
+	font-weight: bold
+
+del
+	text-decoration: line-through
+
+abbr[title], dfn[title]
+	border-bottom: 1px dotted palette(base, x-light)
+	cursor: help
+
+address
+	font-style: normal
+
+
+// Headings
+// -------------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6
+	font-family: $headings-font-family
+	font-weight: bold
+	line-height: 1
+	&:first-child
+		margin-top: 0
+
+h1
+	font-size: 3em
+	margin-bottom: 0.5em
+
+h2
+	font-size: 2.5em
+	margin: 2em 0 1em
+
+h3
+	font-size: 2em
+	margin: 2em 0 1em
+
+h4
+	font-size: 1.75em
+	margin: 2em 0 1em
+
+h5
+	font-size: 1.5em
+	margin: 2em 0 1em
+
+h6
+	font-size: 1.25em
+	margin: 2.5em 0 0.75em
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6
+	margin-top: 0
+
+
+
+// Other Sizes
+// -------------------------------------------------------------------------------
+.xsmall, %xsmall
+	font-size: 0.55em
+.small, %small
+	font-size: 0.75em
+.medium, %medium
+	font-size: 1.4em
+.large, %large
+	font-size: 2em
+.xlarge, %xlarge
+	font-size: 3em
+
+
+
+// Utilities
+// -------------------------------------------------------------------------------
+.lowercase
+	text-transform: lowercase
+
+.uppercase
+	text-transform: uppercase
+
+.titlecase
+	text-transform: none
+
+.url,
+.force-wrap
+	+force-wrap
+
+

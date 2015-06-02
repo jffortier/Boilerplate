@@ -1,0 +1,69 @@
+// Image Replacement
+=hide-text
+	overflow: hidden
+	text-indent: 100%
+	white-space: nowrap
+
+
+// Force parent element to wrap floating childrens
+// Use this technique when overflow: hidden doesn't apply (ex: box-shadow on floating childrens)
+=clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+
+// Calculate em font-size
+=font-size($target-px: 16px, $context: $base-font-size)
+	font-size: $target-px / $context * 1em
+
+
+// Reset Lists
+=list-reset
+	&, & > li
+		list-style: none
+		margin: 0
+		padding: 0
+
+
+// Triangle
+=triangle($size, $color, $direction)
+	content: ""
+	display: block
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: $size
+	@if ($direction == top)
+		border-color: $color transparent transparent transparent
+	@if ($direction == bottom)
+		border-color: transparent transparent $color transparent
+	@if ($direction == left)
+		border-color: transparent transparent transparent $color
+	@if ($direction == right)
+		border-color: transparent $color transparent transparent
+
+
+// SVG images with fallback
+// Requires <html class="svg"> (Use Modernizr or other feature detection technique)
+$image-path: "../img" !default
+=svg-background-image($name)
+	background-image: url(#{$image-path}/#{$name}.png)
+	.svg &
+		background-image: url(#{$image-path}/#{$name}.svg)
+
+
+// Prevent long urls and text from breaking layouts
+// http://perishablepress.com/press/2010/06/01/wrapping-content/
+=force-wrap
+	white-space: pre           // CSS 2.0
+	white-space: pre-wrap      // CSS 2.1
+	white-space: pre-line      // CSS 3.0
+	white-space: -pre-wrap     // Opera 4-6
+	white-space: -o-pre-wrap   // Opera 7
+	white-space: -moz-pre-wrap // Mozilla
+	word-wrap: break-word      // IE 5+
+
+
+

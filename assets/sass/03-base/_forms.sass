@@ -1,0 +1,301 @@
+// Fixes & Reset
+// -------------------------------------------------------------
+input,
+select
+	vertical-align: middle
+
+// Firefox extra spacing
+input::-moz-focus-inner,
+button::-moz-focus-inner
+	border: 0
+	padding: 0
+
+// Webkit adds 2px margin
+button,
+input,
+select,
+textarea
+	margin: 0
+
+
+
+// General
+// -------------------------------------------------------------
+fieldset
+	border: 3px palette(base, x-light) solid
+	padding: gutter() * 2
+	margin-bottom: 2em
+
+legend
+	font-weight: bold
+	padding: 0 1em
+	margin-left: -1em
+	display: block
+
+label
+	display: block
+	font-size: em-calc(14px)
+	margin-bottom: 0.5em
+
+
+
+// Fields
+// -------------------------------------------------------------
+input,
+select,
+textarea
+	background-color: #fff
+	border: 1px palette(base, x-light) solid
+	color: #999
+	display: block
+	font-size: 1em
+	padding: 0.9em
+	transition: all 0.2s linear 0s
+
+	&:focus
+		outline: none
+
+	&:not([type=range]):not([type=submit]):focus
+		border-color: palette(base, light)
+
+
+
+// Placeholder - Stacking them doesn't work
+=placeholder
+	color: palette(base, x-light)
+	font-style: italic
+
+::-webkit-input-placeholder
+	+placeholder
+
+::-moz-placeholder
+	+placeholder
+
+input:-ms-input-placeholder
+	+placeholder
+
+
+// Dropdowns
+select
+	line-height: 2.75em
+	height: 2.75em
+	text-indent: 0.50em
+
+select[multiple]
+	height: 6.5em
+
+
+
+
+// Radio & Checkbox
+// -------------------------------------------------------------
+$radiocheckbox-size: 1.6em
+.checkbox,
+.radio
+	cursor: pointer
+	display: block
+	padding-left: $radiocheckbox-size * 1.5
+	margin-bottom: 1em
+	position: relative
+
+	&.inline
+		display: inline-block
+		margin-right: 1em
+
+	input
+		background-color: $base-border-color
+		border: 0
+		cursor: pointer
+		padding: 0
+		position: absolute
+		top: 0
+		left: 0
+
+
+input[type=checkbox],
+input[type=radio]
+	cursor: pointer
+	-webkit-appearance: none
+	-moz-appearance: none
+
+	width: $radiocheckbox_size!important
+	height: $radiocheckbox_size!important
+	overflow: hidden
+
+	&:before
+		content: ""
+		transition: all 0.2s ease
+
+	&:checked
+		background-color: palette(link, x-light)
+
+
+input[type=checkbox]
+	border-radius: 0
+	text-align: center
+	&:before
+		color: palette(link)
+		content: "✕"
+		display: block
+		font-weight: bold
+		line-height: $radiocheckbox_size
+		transform: translateX(-100%)
+	&:checked:before
+		transform: translateX(0)
+
+input[type=radio]
+	border-radius: 100%
+	&:before
+		background-color: palette(link)
+		border-radius: 100%
+		content: ""
+		margin: - ($radiocheckbox_size / 2) / 2
+		width: $radiocheckbox_size / 2
+		height: $radiocheckbox_size / 2
+		position: relative
+		top: 50%
+		left: -100%
+	&:checked:before
+		display: block
+		left: 50%
+
+
+
+// Buttons
+// -------------------------------------------------------------------------------
+input[type=button],
+input[type=submit],
+button
+	cursor: pointer
+
+input[type=submit]
+	-webkit-appearance: none
+
+// Make buttons play nice in IE
+button
+	width: auto
+	overflow: visible
+	outline: none
+
+	font-size: 1em
+	line-height: $base-line-height * 1em
+	transition: all 0.3s ease
+
+
+// File Uploads
+// -------------------------------------------------------------------------------
+input[type=file]
+	border: 0
+	padding: 0
+
+
+// Textareas
+// -------------------------------------------------------------------------------
+textarea
+	resize: vertical
+	height: 12em
+
+
+
+// Field sizes
+// -------------------------------------------------------------------------------
+.field-xsmall
+	width: 2em
+
+.field-small
+	width: 3em
+
+.field-medium
+	width: 4em
+
+.field-large
+	width: 6em
+
+
+
+// Field Helpers
+// -------------------------------------------------------------------------------
+.field-error,
+.field-help
+	+font-size(12px)
+	line-height: 1.2em
+	font-style: italic
+	padding-top: 0.5em
+	margin: 0
+	width: 49%
+
+.field-error
+	color: palette(error)
+	float: right
+	text-align: right
+
+.field-help
+	float: left
+
+
+
+// Form Actions
+// -------------------------------------------------------------------------------
+// .form-actions
+// 	clear: both
+// 	overflow: hidden
+// 	padding-top: 2.8em
+
+// 	.b-primary
+// 		float: right
+// 	.b-cancel
+// 		float: left
+
+
+
+// Form Layout
+// -------------------------------------------------------------------------------
+form
+	ol,
+	ol li
+		+list-reset
+	ol
+		li
+			+clearfix
+			padding-bottom: 1.8em
+			input,
+			select,
+			textarea
+				width: 100%
+		li:last-child
+			padding-bottom: 0
+
+
+
+// Form Layout - Different columns
+// -------------------------------------------------------------------------------
+.form-2columns
+	overflow: hidden
+	ol
+		li
+			+span(6)
+		li:nth-child(2n)
+			+omega
+		li:nth-child(2n+1)
+			clear: both
+
+.form-3columns
+	overflow: hidden
+	ol
+		li
+			+span(4)
+		li:nth-child(3n)
+			+omega
+		li:nth-child(3n+1)
+			clear: both
+
+.form-4columns
+	overflow: hidden
+	ol
+		li
+			+span(3)
+		li:nth-child(4n)
+			+omega
+		li:nth-child(4n+1)
+			clear: both
+

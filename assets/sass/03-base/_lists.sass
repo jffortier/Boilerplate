@@ -1,0 +1,59 @@
+// Lists
+// -------------------------------------------------------------------------------
+ul, ol
+	margin-left: 4em
+	margin-bottom: $base-line-height * 1em
+
+ul
+	list-style: disc outside
+
+ol
+	margin-left: 4.2em
+
+li > ol,
+li > ul
+	font-size: 0.875em
+	margin-top: $base-line-height * 1em
+
+li
+	margin-bottom: 0.875em
+	&:last-child
+		margin-bottom: 0
+
+
+// Styles
+// -------------------------------------------------------------------------------
+ul, ol
+	&.circle
+		list-style: circle outside
+	&.square
+		list-style: square outside
+	&.none
+		list-style: none
+		margin-left: 0
+	&.leading-zero
+		list-style: decimal-leading-zero
+	&.lower-roman
+		list-style: lower-roman
+	&.upper-roman
+		list-style: upper-roman
+	&.lower-alpha
+		list-style: lower-alpha
+	&.upper-alpha
+		list-style: upper-alpha
+
+
+
+// Description Lists
+// -------------------------------------------------------------------------------
+dl
+	margin-bottom: $base-line-height * 1em
+
+dt
+	font-weight: bold
+	margin-top: $base-line-height * 1em
+dd
+	padding-left: $base-line-height * 1em
+
+dl dt:first-child
+	margin-top: 0

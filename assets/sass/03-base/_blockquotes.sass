@@ -1,0 +1,21 @@
+blockquote, q
+	quotes: "\201C" "\201D" "\201C" "\201D"
+
+
+// Blockquotes
+blockquote
+	font-style: italic
+	padding-left: 3.5em
+	position: relative
+	&:before
+		content: open-quote
+		color: palette(link)
+		font-size: 5em
+		line-height: 0.75
+		position: absolute
+		top: 0
+		left: 0
+
+// Quotes
+q
+	font-style: italic

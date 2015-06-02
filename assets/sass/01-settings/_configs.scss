@@ -1,0 +1,91 @@
+// This file is in scss to help readability of maps.
+
+
+// Grids
+// http://susydocs.oddbird.net/
+$susy: (
+	columns: 12,
+	gutters: 0.25,
+	column-width: 80px,
+	// debug: ( image: show-columns ),
+);
+
+$grid-max-width: (susy-get(column-width) * susy-get(columns)) + (susy-get(column-width) * susy-get(gutters) * (susy-get(columns) - 1));
+$grid-min-width: 320px;
+
+
+// Typography
+$base-font-size      : 16px;
+$base-line-height    : 1.6;
+$base-font-family    : Arial, Helvetica, sans-serif;
+$headings-font-family: Helvetica, Helvetica, sans-serif;
+
+
+// Colors
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/ GOLD!
+// x-dark, dark *, mid-dark, base * (default), mid-light, light *, x-light
+$color-base: #333;
+$color-link: #3366cc;
+$color-error: #cf4339;
+$color-white: #fff;
+// $color-green: #00cc00;
+
+$palettes: (
+	base: (
+		x-light: lighten($color-base, 70%),
+		light: lighten($color-base, 50%),
+		mid-light: lighten($color-base, 25%),
+		base:  $color-base,
+		dark: darken($color-base, 50%)
+	),
+	link: (
+		x-light: lighten($color-link, 40%),
+		light: lighten($color-link, 20%),
+		base:  $color-link,
+		dark: darken($color-link, 20%)
+	),
+	error: (
+		light: lighten($color-error, 20%),
+		mid-light: lighten($color-error, 10%),
+		base:  $color-error,
+		mid-dark: darken($color-error, 10%),
+		dark: darken($color-error, 20%)
+	),
+	white: (
+		base:  $color-white
+	),
+	// green: {
+	// 	light: lighten($color-green, 10%),
+	// 	base:  $color-green,
+	// 	dark: darken($color-green, 10%)
+	// },
+);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@mixin generate-brand-classes($src: $palettes) {
+	@each $palette in $src {
+		$types: nth($palette, 1);
+		$tones: nth($palette, 2);
+
+		@each $tone in $tones {
+			$variation: nth($tone, 1);
+			$val: nth($tone, 2);
+
+			@if($variation == base) {
+				.brand-#{$types} { color: $val; }
+				.brand-#{$types}-bg { background-color: $val; }
+			} @else {
+				.brand-#{$types}-#{$variation} { color: $val; }
+				.brand-#{$types}-#{$variation}-bg { background-color: $val; }
+			}
+		}
+	}
+}
+
+
+// Borders
+$base-border: 1px palette(base, x-light) solid;
+$base-border-color: palette(base, x-light);

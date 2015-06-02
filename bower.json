@@ -1,0 +1,19 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "authors": [
+    "JF Fortier"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2"
+  },
+  "private": true
+}
