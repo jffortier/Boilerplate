@@ -8,8 +8,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="assets/dist/css/style.css">
-	<link rel="stylesheet" href="assets/dist/css/styleguide.css">
+	<link rel="stylesheet" href="assets/build/css/style.css">
+	<link rel="stylesheet" href="assets/build/css/styleguide.css">
 </head>
 <body>
 	<header class="header">
