@@ -1,0 +1,57 @@
+// Tabs
+// -------------------------------------------------------------------------------
+.tabs-menu
+	display: none
+	margin-top: -0.25em
+	a
+		color: palette(base)
+		font-weight: bold
+		display: flex
+		line-height: 1.3em
+		margin: 0.25em 0.25em 0 0
+		padding: 1em 1.5em
+		max-width: 25%
+		text-decoration: none
+		align-items: center
+		background-color: palette(base, xx-light)
+		transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0s linear
+
+		&:hover,
+		&:focus
+			background-color: palette(base, x-light)
+
+		&.active
+			background-color: palette(base, x-light)
+
+.tabs-content
+	background-color: palette(base, x-light)
+	padding: 1.8125em 2.8125em
+
+
+// Horizontal Tabs
+.tabs
+	.tabs-menu.visible
+		display: flex
+		flex-wrap: wrap
+		a.active
+			box-shadow: inset 0 0.125em 0 0 palette(link)
+
+
+// Vertical Tabs
+.tabs-vertical
+	overflow: hidden
+
+	.tabs-menu.visible
+		display: block
+		float: left
+		width: 25%
+		a
+			display: block
+			max-width: 100%
+			margin-right: 0
+		a.active
+			box-shadow: inset 0.125em 0 0 0 palette(link)
+
+	.tabs-content
+		float: left
+		width: 75%

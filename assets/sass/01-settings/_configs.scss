@@ -32,7 +32,8 @@ $color-white: #fff;
 
 $palettes: (
 	base: (
-		x-light: lighten($color-base, 70%),
+		xx-light: lighten($color-base, 78%),
+		x-light: lighten($color-base, 75%),
 		light: lighten($color-base, 50%),
 		mid-light: lighten($color-base, 25%),
 		base:  $color-base,

@@ -28,10 +28,69 @@ var Site = {};
 	 * that require a full DOM. Reliably triggered after init() has ran.
 	 */
 	var initAfterDOM = function() {
+		Tabs.setup(".tabs, .tabs-vertical");
 
+		// invoke conditional behaviors and event handlers
+		initHandlers();
+	};
+
+
+
+	/**
+	 * Misc dom-ready
+	 */
+	var initHandlers = function() {
 
 
 	};
+
+
+
+	/**
+	 * Tabs
+	 */
+	var Tabs = (function() {
+
+		var init = function(selector) {
+			doc.ready(function() {
+				$(selector).each(register);
+			});
+			return true;
+		};
+
+		var register = function() {
+			var tabs = $(this),
+				tabsMenu = tabs.find(".tabs-menu"),
+				tabsContent = tabs.find(".tabs-content"),
+				tabsTitle = tabsContent.find(".tabs-title");
+
+			// Yay I have JS
+			tabsMenu.addClass("visible");
+			tabsTitle.remove();
+			tabsContent.not(".active").hide();
+
+			// Bind action
+			tabsMenu.on("click", "a", function(e){
+				e.preventDefault();
+
+				var tab = $(this);
+				if(!tab.hasClass("active")){
+					tabsContent.hide();
+					tabsMenu.find(".active").removeClass("active");
+
+					tabsContent.eq(tab.index()).show();
+					tab.addClass("active");
+				}
+			});
+		};
+
+		return {
+			setup : init
+		};
+
+	})();
+
+
 
 	// bootstrap the application
 	ns.init();
