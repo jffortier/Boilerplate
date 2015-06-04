@@ -23,7 +23,7 @@ $ npm install
 ```
 
 ```
-$ bowser install --save
+$ bower install --save
 ```
 
 ## Thanks
