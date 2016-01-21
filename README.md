@@ -4,10 +4,6 @@ Kick-start your projects with a solid Sass foundation and a nice style-guide.
 [Demo](http://jeanfredericfortier.com/boilerplate)
 
 ## Requirements
-##### Required GEM
-```
-$ gem install sass-globbing
-```
 
 ##### Install Globally
 ```
