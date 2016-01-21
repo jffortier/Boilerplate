@@ -66,27 +66,6 @@ $palettes: (
     @return map-get(map-get($palettes, $palette), $tone);
 }
 
-@mixin generate-brand-classes($src: $palettes) {
-	@each $palette in $src {
-		$types: nth($palette, 1);
-		$tones: nth($palette, 2);
-
-		@each $tone in $tones {
-			$variation: nth($tone, 1);
-			$val: nth($tone, 2);
-
-			@if($variation == base) {
-				.brand-#{$types} { color: $val; }
-				.brand-#{$types}-bg { background-color: $val; }
-			} @else {
-				.brand-#{$types}-#{$variation} { color: $val; }
-				.brand-#{$types}-#{$variation}-bg { background-color: $val; }
-			}
-		}
-	}
-}
-
-
 // Borders
 $base-border: 1px palette(base, x-light) solid;
 $base-border-color: palette(base, x-light);

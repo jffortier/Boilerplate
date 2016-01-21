@@ -573,24 +573,24 @@ pre
 
 		<span class="styleguide-title"><span>Brand Colors</span></span>
 			<span class="styleguide-brands">
-				<span class="styleguide-brand brand-base-x-light-bg">x-light</span>
-				<span class="styleguide-brand brand-base-light-bg">light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-base-mid-light-bg">mid-light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-base-bg">base</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-base-dark-bg">dark</span>
+				<span class="styleguide-brand fill-base-x-light">x-light</span>
+				<span class="styleguide-brand fill-base-light">light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-base-mid-light">mid-light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-base">base</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-base-dark">dark</span>
 			</span>
 			<span class="styleguide-brands">
-				<span class="styleguide-brand brand-link-x-light-bg">x-light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-link-light-bg">light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-link-bg">base</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-link-dark-bg">dark</span>
+				<span class="styleguide-brand fill-link-x-light">x-light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-link-light">light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-link">base</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-link-dark">dark</span>
 			</span>
 			<span class="styleguide-brands">
-				<span class="styleguide-brand styleguide-brand-reverse brand-error-light-bg">light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-light-bg">mid-light</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-error-bg">base</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-error-mid-dark-bg">mid-dark</span>
-				<span class="styleguide-brand styleguide-brand-reverse brand-error-dark-bg">dark</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-error-light">light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-error-mid-light">mid-light</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-error">base</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-error-mid-dark">mid-dark</span>
+				<span class="styleguide-brand styleguide-brand-reverse fill-error-dark">dark</span>
 			</span>
 
 
