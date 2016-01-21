@@ -1,22 +1,14 @@
 // Default Buttons
 // -------------------------------------------------------------------------------
-%b
-	background-color: palette(link)
-	border-radius: 0.1875em
+.b, %b
 	border: 0
-	color: #fff
+	border-radius: 0.1875em
 	display: inline-block
 	font-weight: bold
 	padding: 0.75em 2em
 	text-decoration: none
-	&:hover,
-	&:focus, // accessibility
-	&.active
-		background-color: palette(link, dark)
-		color: #fff
-
-.b
-	@extend %b
+	text-transform: uppercase
+	text-align: center
 
 
 // Sizes
@@ -25,16 +17,26 @@
 // -------------------------------------------------------------------------------
 
 
-
 // Styles
 // -------------------------------------------------------------------------------
-.b1
+.b-1
+	background-color: palette(link)
+	color: palette(white) !important
+	&:hover,
+	&:focus,
+	&.active
+		background-color: palette(link, dark)
+
+.b-2
 	background-color: transparent
 	box-shadow: inset 0 0 0 0.125em palette(link)
 	border-radius: 0.25em
 	color: palette(link)
-	&:hover
+	&:hover,
+	&:focus,
+	&.active
 		background-color: palette(link)
+		color: palette(white)
 
 
 // Loading

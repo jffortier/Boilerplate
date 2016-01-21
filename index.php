@@ -280,34 +280,44 @@ pre
 		<span class="styleguide-title"><span>Buttons</span></span>
 			<div class="columns">
 				<div class="span3">
-					<a class="b xsmall" href="#">Button</a><br><br>
-					<a class="b small" href="#">Button</a><br><br>
-					<a class="b" href="#">Button</a><br><br>
-					<a class="b medium" href="#">Button</a><br><br>
-					<a class="b large" href="#">Button</a>
+					<a class="b b-1 xsmall" href="#">Button</a><br><br>
+					<a class="b b-1 small" href="#">Button</a><br><br>
+					<a class="b b-1" href="#">Button</a><br><br>
+					<a class="b b-1 medium" href="#">Button</a><br><br>
+					<a class="b b-1 large" href="#">Button</a>
 				</div>
 				<div class="span3 not-last">
-					<a class="b b1 xsmall" href="#">Button</a><br><br>
-					<a class="b b1 small" href="#">Button</a><br><br>
-					<a class="b b1" href="#">Button</a><br><br>
-					<a class="b b1 medium" href="#">Button</a><br><br>
-					<a class="b b1 large" href="#">Button</a>
+					<a class="b b-2 xsmall" href="#">Button</a><br><br>
+					<a class="b b-2 small" href="#">Button</a><br><br>
+					<a class="b b-2" href="#">Button</a><br><br>
+					<a class="b b-2 medium" href="#">Button</a><br><br>
+					<a class="b b-2 large" href="#">Button</a>
 				</div>
 			</div>
 
 
 			<span class="styleguide-subtitle"><span>Loading Buttons</span></span>
 			<span class="styleguide-note">Click on button to toggle loading</span>
-				<button class="b b-loading xsmall"><span></span>Submit</button><br><br>
-				<button class="b b-loading small"><span></span>Submit</button><br><br>
-				<button class="b b-loading"><span></span>Submit</button><br><br>
-				<button class="b b-loading medium"><span></span>Submit</button><br><br>
-				<button class="b b-loading large"><span></span>Submit</button>
-
+				<div class="columns">
+					<div class="span3">
+						<button class="b b-1 b-loading xsmall"><span></span>Submit</button><br><br>
+						<button class="b b-1 b-loading small"><span></span>Submit</button><br><br>
+						<button class="b b-1 b-loading"><span></span>Submit</button><br><br>
+						<button class="b b-1 b-loading medium"><span></span>Submit</button><br><br>
+						<button class="b b-1 b-loading large"><span></span>Submit</button>
+					</div>
+					<div class="span3 not-last">
+						<button class="b b-2 b-loading xsmall"><span></span>Submit</button><br><br>
+						<button class="b b-2 b-loading small"><span></span>Submit</button><br><br>
+						<button class="b b-2 b-loading"><span></span>Submit</button><br><br>
+						<button class="b b-2 b-loading medium"><span></span>Submit</button><br><br>
+						<button class="b b-2 b-loading large"><span></span>Submit</button>
+					</div>
+				</div>
 
 		<span class="styleguide-title"><span>Pagination</span></span>
 			<nav class="pagination xsmall">
-				<a href="#" class="b b-previous">Previous</a>
+				<a href="#" class="b b-1 b-previous">Previous</a>
 				<ul>
 					<li><a href="#" class="current">1</a></li>
 					<li><a href="#">2</a></li>
@@ -316,11 +326,11 @@ pre
 					<li><a href="#">5</a></li>
 					<li><a href="#">6</a></li>
 				</ul>
-				<a href="#" class="b b-next">Next</a>
+				<a href="#" class="b b-1 b-next">Next</a>
 			</nav>
 			<br>
 			<nav class="pagination small">
-				<a href="#" class="b b-previous">Previous</a>
+				<a href="#" class="b b-1 b-previous">Previous</a>
 				<ul>
 					<li><a href="#" class="current">1</a></li>
 					<li><a href="#">2</a></li>
@@ -329,11 +339,11 @@ pre
 					<li><a href="#">5</a></li>
 					<li><a href="#">6</a></li>
 				</ul>
-				<a href="#" class="b b-next">Next</a>
+				<a href="#" class="b b-1 b-next">Next</a>
 			</nav>
 			<br>
 			<nav class="pagination">
-				<a href="#" class="b b-previous">Previous</a>
+				<a href="#" class="b b-1 b-previous">Previous</a>
 				<ul>
 					<li><a href="#" class="current">1</a></li>
 					<li><a href="#">2</a></li>
@@ -342,11 +352,11 @@ pre
 					<li><a href="#">5</a></li>
 					<li><a href="#">6</a></li>
 				</ul>
-				<a href="#" class="b b-next">Next</a>
+				<a href="#" class="b b-1 b-next">Next</a>
 			</nav>
 			<br>
 			<nav class="pagination medium">
-				<a href="#" class="b b-previous">Previous</a>
+				<a href="#" class="b b-1 b-previous">Previous</a>
 				<ul>
 					<li><a href="#" class="current">1</a></li>
 					<li><a href="#">2</a></li>
@@ -355,11 +365,11 @@ pre
 					<li><a href="#">5</a></li>
 					<li><a href="#">6</a></li>
 				</ul>
-				<a href="#" class="b b-next">Next</a>
+				<a href="#" class="b b-1 b-next">Next</a>
 			</nav>
 			<br>
 			<nav class="pagination large">
-				<a href="#" class="b b-previous">Previous</a>
+				<a href="#" class="b b-1 b-previous">Previous</a>
 				<ul>
 					<li><a href="#" class="current">1</a></li>
 					<li><a href="#">2</a></li>
@@ -368,7 +378,7 @@ pre
 					<li><a href="#">5</a></li>
 					<li><a href="#">6</a></li>
 				</ul>
-				<a href="#" class="b b-next">Next</a>
+				<a href="#" class="b b-1 b-next">Next</a>
 			</nav>
 
 
